@@ -116,3 +116,7 @@ vite.config.ts.timestamp-*
 .astro/
 # Turbo Repo
 .turbo
+
+# keep the Interlock results the heat-wave page loads
+!interlock/out/
+!interlock/out/results.json
