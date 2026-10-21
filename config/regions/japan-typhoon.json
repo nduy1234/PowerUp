@@ -1,0 +1,126 @@
+{
+  "id": "japan-typhoon",
+  "heatDays": [
+    3,
+    4
+  ],
+  "shutoff": {
+    "startH": 113,
+    "staggerH": [
+      0,
+      2,
+      4
+    ],
+    "durationH": 43,
+    "fillLeadH": 24,
+    "coldLoadFactor": 1.5,
+    "coldLoadH": 2,
+    "rule": "Wind-damage outages; staged restoration (synthetic rule)"
+  },
+  "fleet": {
+    "adoptionPct": 12,
+    "capacityKWh": 39.2,
+    "powerKW": 20,
+    "efficiency": 0.95,
+    "floorPct": 20,
+    "outageFloorPct": 5,
+    "ceilingPct": 100,
+    "startSocPct": 60,
+    "solarKW": 5,
+    "solarDerate": 0.8,
+    "smokeDerate": 0.7,
+    "communityKWh": 0,
+    "communityKW": 0,
+    "communitySolarKW": 0,
+    "exportKW": 5,
+    "chargeKW": 10
+  },
+  "loads": {
+    "scale": 0.55,
+    "medicalPct": 4,
+    "medicalKW": 0.5,
+    "evPct": 10,
+    "evKW": 7.2,
+    "acPct": 40,
+    "acKW": 3,
+    "poolPct": 1,
+    "poolKW": 1.5,
+    "shopPct": 5,
+    "shopKW": 2
+  },
+  "credits": {
+    "ev": 0.1,
+    "pool": 0.15,
+    "ac": 0.25
+  },
+  "name": "Japan typhoon",
+  "provenance": "SYNTHETIC",
+  "flag": "🇯🇵",
+  "note": "SYNTHETIC: illustrative inputs on the same Malibu circuits used as a stand-in grid. Same engine, different config. Only the named hazard-rating system and the mains frequency/voltage are real facts for this region.",
+  "hazard": {
+    "name": "Typhoon",
+    "feed": "Japan Meteorological Agency typhoon warnings",
+    "levels": [
+      "Advisory",
+      "Warning",
+      "Emergency Warning"
+    ]
+  },
+  "grid": {
+    "hz": 60,
+    "volts": 100,
+    "hzEast": 50,
+    "note": "100 V; 50 Hz in the east (Tokyo), 60 Hz in the west (Osaka). Pack uses the west."
+  },
+  "tariff": {
+    "currency": "JPY",
+    "symbol": "¥",
+    "peakHours": [
+      17,
+      21
+    ],
+    "peak": 40,
+    "offpeak": 25,
+    "drCredit": 60,
+    "nightTargetPct": 60,
+    "label": "Time-of-use spread (synthetic)"
+  },
+  "criticalLoads": [
+    {
+      "name": "Mobile base station",
+      "kw": 9
+    },
+    {
+      "name": "Dialysis clinic",
+      "kw": 18
+    },
+    {
+      "name": "School-gym shelter",
+      "kw": 15
+    }
+  ],
+  "signal": "JMA typhoon emergency warning",
+  "notice": "Utility outage notice",
+  "priority": "Home medical device users",
+  "decider": "Utility dispatcher",
+  "tariffLabel": "Time-of-use spread (synthetic)",
+  "currency": "USD equivalent",
+  "siteLabel": "home",
+  "interlockPack": "sce",
+  "params": {
+    "price_mode": "tou",
+    "on_peak": 0.27,
+    "off_peak": 0.17,
+    "on_peak_hours": [
+      17,
+      21
+    ],
+    "adoption_pct": 12,
+    "daily_use_kwh": 13,
+    "medical_baseline_pct": 4,
+    "planned_outage_h": 48,
+    "mode_critical": 4,
+    "mode_essential": 8,
+    "mode_normal": 13
+  }
+}

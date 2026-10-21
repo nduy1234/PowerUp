@@ -1,0 +1,127 @@
+{
+  "id": "guangdong-typhoon",
+  "heatDays": [
+    3,
+    4
+  ],
+  "shutoff": {
+    "startH": 113,
+    "staggerH": [
+      0,
+      2,
+      4
+    ],
+    "durationH": 43,
+    "fillLeadH": 24,
+    "coldLoadFactor": 1.5,
+    "coldLoadH": 2,
+    "rule": "Outages from line damage; staged restoration by the grid dispatcher (synthetic rule)"
+  },
+  "fleet": {
+    "adoptionPct": 10,
+    "capacityKWh": 39.2,
+    "powerKW": 20,
+    "efficiency": 0.95,
+    "floorPct": 20,
+    "outageFloorPct": 5,
+    "ceilingPct": 100,
+    "startSocPct": 60,
+    "solarKW": 4,
+    "solarDerate": 0.8,
+    "smokeDerate": 0.7,
+    "communityKWh": 0,
+    "communityKW": 0,
+    "communitySolarKW": 0,
+    "exportKW": 5,
+    "chargeKW": 10
+  },
+  "loads": {
+    "scale": 0.5,
+    "medicalPct": 4,
+    "medicalKW": 0.5,
+    "evPct": 15,
+    "evKW": 7.2,
+    "acPct": 40,
+    "acKW": 3,
+    "poolPct": 2,
+    "poolKW": 1.5,
+    "shopPct": 5,
+    "shopKW": 2
+  },
+  "credits": {
+    "ev": 0.1,
+    "pool": 0.15,
+    "ac": 0.25
+  },
+  "name": "Guangdong typhoon",
+  "provenance": "SYNTHETIC",
+  "flag": "🇨🇳",
+  "note": "SYNTHETIC: illustrative inputs on the same Malibu circuits used as a stand-in grid. Same engine, different config. Only the named hazard-rating system and the mains frequency/voltage are real facts for this region.",
+  "hazard": {
+    "name": "Typhoon",
+    "feed": "China Meteorological Administration typhoon warning signals",
+    "levels": [
+      "Blue",
+      "Yellow",
+      "Orange",
+      "Red"
+    ]
+  },
+  "grid": {
+    "hz": 50,
+    "volts": 220,
+    "note": "China Southern Power Grid area: 220 V, 50 Hz mains"
+  },
+  "tariff": {
+    "currency": "CNY",
+    "symbol": "¥",
+    "peakHours": [
+      18,
+      22
+    ],
+    "peak": 1.0,
+    "offpeak": 0.35,
+    "drCredit": 3.0,
+    "nightTargetPct": 60,
+    "label": "Peak/valley tariff (synthetic)"
+  },
+  "criticalLoads": [
+    {
+      "name": "Base station",
+      "kw": 9
+    },
+    {
+      "name": "Pharmacy cold chain",
+      "kw": 12
+    },
+    {
+      "name": "Shelter",
+      "kw": 18
+    }
+  ],
+  "signal": "CMA typhoon warning (red signal)",
+  "notice": "Grid outage notice after line damage",
+  "priority": "Local priority users list",
+  "decider": "Grid dispatcher",
+  "tariffLabel": "Peak/valley tariff (synthetic)",
+  "currency": "USD equivalent",
+  "siteLabel": "home",
+  "interlockPack": "sce",
+  "params": {
+    "price_mode": "tou",
+    "on_peak": 0.18,
+    "off_peak": 0.06,
+    "on_peak_hours": [
+      18,
+      22
+    ],
+    "adoption_pct": 10,
+    "daily_use_kwh": 12,
+    "medical_baseline_pct": 4,
+    "planned_outage_h": 36,
+    "cell_tower_backup_h": 4,
+    "mode_critical": 4,
+    "mode_essential": 8,
+    "mode_normal": 12
+  }
+}

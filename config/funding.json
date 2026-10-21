@@ -1,0 +1,45 @@
+{
+  "note": "Program facts as the team researched them; verify current solicitations before applying. Every number on the path is computed from a scheduler run.",
+  "programs": [
+    {
+      "role": "Primary",
+      "name": "DOE SBIR/STTR",
+      "level": "federal",
+      "detail": "Reauthorized April 2026 through 2031. Fit: grid resilience and distributed energy."
+    },
+    {
+      "role": "Alternative",
+      "name": "DoD SBIR (AFWERX or Army)",
+      "level": "federal",
+      "detail": "Fit: keeping military base housing powered through outages."
+    },
+    {
+      "role": "Bridge",
+      "name": "CalSEED",
+      "level": "state",
+      "detail": "California state clean-energy seed funding (state, not federal)."
+    }
+  ],
+  "path": [
+    {
+      "step": "Phase I",
+      "program": "DOE SBIR/STTR",
+      "metric": "malibu-week"
+    },
+    {
+      "step": "Phase II",
+      "program": "DOE SBIR/STTR",
+      "metric": "sce-pilot"
+    },
+    {
+      "step": "DoD",
+      "program": "DoD SBIR (AFWERX or Army)",
+      "metric": "base-housing"
+    },
+    {
+      "step": "Bridge",
+      "program": "CalSEED (state)",
+      "metric": "malibu-week"
+    }
+  ]
+}

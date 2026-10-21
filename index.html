@@ -638,6 +638,7 @@ canvas.chart { display: block; width: 100%; }
           <li>SCE does not publish Medical Baseline counts per circuit. The Medical Baseline homes here are demo homes placed by a seeded random draw.</li>
           <li>Money uses real CAISO day-ahead prices for the SCE zone on the same dates in 2025 (wholesale value of one battery's best daily schedule, perfect foresight). A California home battery does not collect the wholesale price directly today, and no Malibu node publishes a price. The assumed TOU rates are the alternative in the drawer.</li>
           <li>Base has no California fleet. This is a demo of what a dispatcher could do, not a record of what happened.</li>
+          <li><b>Rule: customer prices are never raised in an emergency.</b> The week scheduler (pilot/app/src/scheduler.js) bills every hour at the normal tariff and pays flexibility credits for deferring EV charging, pool pumps and AC; its tests check this for every region pack (config/regions/).</li>
         </ul>
       </div>
     </div>

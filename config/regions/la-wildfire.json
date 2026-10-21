@@ -1,0 +1,109 @@
+{
+  "id": "la-wildfire",
+  "heatDays": [
+    3,
+    4
+  ],
+  "shutoff": {
+    "startH": 113,
+    "staggerH": [
+      0,
+      2,
+      4
+    ],
+    "durationH": 43,
+    "fillLeadH": 24,
+    "coldLoadFactor": 1.5,
+    "coldLoadH": 2,
+    "rule": "SCE PSPS: high-wind de-energization of named circuits; restoration after line patrol (8+ h)"
+  },
+  "fleet": {
+    "adoptionPct": 15,
+    "capacityKWh": 39.2,
+    "powerKW": 20,
+    "efficiency": 0.95,
+    "floorPct": 20,
+    "outageFloorPct": 5,
+    "ceilingPct": 100,
+    "startSocPct": 60,
+    "solarKW": 6,
+    "solarDerate": 0.8,
+    "smokeDerate": 0.7,
+    "communityKWh": 0,
+    "communityKW": 0,
+    "communitySolarKW": 0,
+    "exportKW": 5,
+    "chargeKW": 10
+  },
+  "loads": {
+    "scale": 1,
+    "medicalPct": 5,
+    "medicalKW": 0.5,
+    "evPct": 25,
+    "evKW": 7.2,
+    "acPct": 40,
+    "acKW": 3,
+    "poolPct": 10,
+    "poolKW": 1.5,
+    "shopPct": 5,
+    "shopKW": 2
+  },
+  "credits": {
+    "ev": 0.1,
+    "pool": 0.15,
+    "ac": 0.25
+  },
+  "name": "LA wildfire (Malibu, SCE)",
+  "provenance": "REAL",
+  "flag": "🇺🇸",
+  "note": "Real: SCE circuits, customers and October load profiles, NWS/SCE timeline, Base Core 39.2 kWh. Assumed: adoption, solar, worst-case homes, credits, the $1/kWh peak relief credit and the approximate SCE TOU rates.",
+  "hazard": {
+    "name": "Wildfire public-safety shutoff",
+    "feed": "NWS Red Flag Warning / Fire Weather Watch",
+    "levels": [
+      "Watch",
+      "Red Flag Warning"
+    ]
+  },
+  "grid": {
+    "hz": 60,
+    "volts": 120,
+    "note": "US split-phase 120/240 V"
+  },
+  "tariff": {
+    "currency": "USD",
+    "symbol": "$",
+    "peakHours": [
+      16,
+      21
+    ],
+    "peak": 0.6,
+    "offpeak": 0.3,
+    "drCredit": 1.0,
+    "nightTargetPct": 60,
+    "label": "SCE TOU-D-4-9PM, approximate (assumed); peak relief credit $1/kWh (assumed)"
+  },
+  "criticalLoads": [
+    {
+      "name": "Cell sites",
+      "kw": 9
+    },
+    {
+      "name": "Fire station",
+      "kw": 15
+    },
+    {
+      "name": "Urgent care clinic",
+      "kw": 21
+    }
+  ],
+  "signal": "NWS Red Flag Warning",
+  "notice": "SCE PSPS circuit list",
+  "priority": "SCE Medical Baseline",
+  "decider": "SCE shutoff officer",
+  "tariffLabel": "CAISO day-ahead, SCE zone (real)",
+  "currency": "USD",
+  "siteLabel": "home",
+  "interlockPack": "sce",
+  "params": {}
+}

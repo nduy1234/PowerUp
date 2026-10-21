@@ -1,0 +1,12 @@
+{
+  "default": "la-wildfire",
+  "order": [
+    "la-wildfire",
+    "au-bushfire",
+    "guangdong-typhoon",
+    "japan-typhoon",
+    "community-battery",
+    "dod-base-housing"
+  ],
+  "assumed": "Fleet sizes, solar, worst-case loads, credits and tariffs are ASSUMED unless a pack says otherwise. Base Core 39.2 kWh is real; 20 kW is the README figure, kept as an assumption."
+}

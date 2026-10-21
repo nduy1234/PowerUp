@@ -1,0 +1,113 @@
+{
+  "id": "dod-base-housing",
+  "heatDays": [
+    3,
+    4
+  ],
+  "shutoff": {
+    "startH": 113,
+    "staggerH": [
+      0,
+      2,
+      4
+    ],
+    "durationH": 43,
+    "fillLeadH": 24,
+    "coldLoadFactor": 1.5,
+    "coldLoadH": 2,
+    "rule": "Grid outage; installation energy manager approves islanding (synthetic rule)"
+  },
+  "fleet": {
+    "adoptionPct": 60,
+    "capacityKWh": 39.2,
+    "powerKW": 20,
+    "efficiency": 0.95,
+    "floorPct": 40,
+    "outageFloorPct": 5,
+    "ceilingPct": 100,
+    "startSocPct": 60,
+    "solarKW": 6,
+    "solarDerate": 0.8,
+    "smokeDerate": 0.7,
+    "communityKWh": 0,
+    "communityKW": 0,
+    "communitySolarKW": 0,
+    "exportKW": 5,
+    "chargeKW": 10
+  },
+  "loads": {
+    "scale": 1,
+    "medicalPct": 3,
+    "medicalKW": 0.5,
+    "evPct": 25,
+    "evKW": 7.2,
+    "acPct": 40,
+    "acKW": 3,
+    "poolPct": 10,
+    "poolKW": 1.5,
+    "shopPct": 5,
+    "shopKW": 2
+  },
+  "credits": {
+    "ev": 0.1,
+    "pool": 0.15,
+    "ac": 0.25
+  },
+  "name": "DoD base housing",
+  "provenance": "SYNTHETIC",
+  "flag": "🎖️",
+  "note": "SYNTHETIC: illustrative inputs on the same Malibu circuits used as a stand-in grid. Same engine, different config. Only the named hazard-rating system and the mains frequency/voltage are real facts for this region. Strict installation rules: only the utility and the on-site energy manager may command batteries (Interlock 'installation' pack).",
+  "hazard": {
+    "name": "Grid outage near an installation",
+    "feed": "NWS alerts + installation EOC",
+    "levels": [
+      "Watch",
+      "Warning",
+      "Emergency"
+    ]
+  },
+  "grid": {
+    "hz": 60,
+    "volts": 120,
+    "note": "US split-phase 120/240 V"
+  },
+  "tariff": {
+    "currency": "USD",
+    "symbol": "$",
+    "peakHours": [
+      16,
+      21
+    ],
+    "peak": 0.5,
+    "offpeak": 0.25,
+    "drCredit": 1.0,
+    "nightTargetPct": 70,
+    "label": "Installation utility contract (synthetic)"
+  },
+  "criticalLoads": [
+    {
+      "name": "Emergency operations center",
+      "kw": 30
+    },
+    {
+      "name": "Water and wastewater",
+      "kw": 36
+    },
+    {
+      "name": "Medical clinic",
+      "kw": 24
+    }
+  ],
+  "signal": "Installation EOC alert",
+  "notice": "Utility outage notice",
+  "priority": "Mission-critical housing",
+  "decider": "Installation energy manager",
+  "tariffLabel": "Installation utility contract (synthetic)",
+  "currency": "USD",
+  "siteLabel": "home",
+  "interlockPack": "installation",
+  "params": {
+    "adoption_pct": 60,
+    "medical_baseline_pct": 3
+  }
+}

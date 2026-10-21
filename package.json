@@ -4,7 +4,7 @@
   "private": true,
   "description": "PowerUP: the disaster layer for a home-battery fleet. PowerUP plans for wildfire shutoffs; Interlock guards every order; neighborhood islands share batteries behind SCE's switches.",
   "scripts": {
-    "test": "node --test interlock/tests/*.test.mjs pilot/app/tests/guard.test.mjs && node islands/island.test.cjs && node pilot/tests/pilot.test.cjs && node pilot/app/tests/smoke.cjs",
+    "test": "node --test interlock/tests/*.test.mjs pilot/app/tests/guard.test.mjs && node islands/island.test.cjs && node pilot/tests/pilot.test.cjs && node pilot/app/tests/smoke.cjs && node --test pilot/app/tests/scheduler.test.mjs",
     "heatwave": "node interlock/cli.mjs",
     "build": "python3 -I pilot/build_data.py && python3 -I pilot/build.py && python3 -I pilot/app/build_pack.py && python3 -I pilot/app/build.py && python3 -I site.py"
   },

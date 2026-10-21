@@ -1,0 +1,126 @@
+{
+  "id": "au-bushfire",
+  "heatDays": [
+    3,
+    4
+  ],
+  "shutoff": {
+    "startH": 113,
+    "staggerH": [
+      0,
+      2,
+      4
+    ],
+    "durationH": 43,
+    "fillLeadH": 24,
+    "coldLoadFactor": 1.5,
+    "coldLoadH": 2,
+    "rule": "Distributor de-energises bushfire-risk feeders on Catastrophic days (synthetic rule)"
+  },
+  "fleet": {
+    "adoptionPct": 30,
+    "capacityKWh": 39.2,
+    "powerKW": 20,
+    "efficiency": 0.95,
+    "floorPct": 20,
+    "outageFloorPct": 5,
+    "ceilingPct": 100,
+    "startSocPct": 60,
+    "solarKW": 8,
+    "solarDerate": 0.8,
+    "smokeDerate": 0.7,
+    "communityKWh": 0,
+    "communityKW": 0,
+    "communitySolarKW": 0,
+    "exportKW": 5,
+    "chargeKW": 10
+  },
+  "loads": {
+    "scale": 0.7,
+    "medicalPct": 3,
+    "medicalKW": 0.5,
+    "evPct": 25,
+    "evKW": 7.2,
+    "acPct": 40,
+    "acKW": 3,
+    "poolPct": 10,
+    "poolKW": 1.5,
+    "shopPct": 5,
+    "shopKW": 2
+  },
+  "credits": {
+    "ev": 0.1,
+    "pool": 0.15,
+    "ac": 0.25
+  },
+  "name": "Australian bushfire",
+  "provenance": "SYNTHETIC",
+  "flag": "🇦🇺",
+  "note": "SYNTHETIC: illustrative inputs on the same Malibu circuits used as a stand-in grid. Same engine, different config. Only the named hazard-rating system and the mains frequency/voltage are real facts for this region.",
+  "hazard": {
+    "name": "Bushfire",
+    "feed": "Bureau of Meteorology Fire Danger Ratings",
+    "levels": [
+      "Moderate",
+      "High",
+      "Extreme",
+      "Catastrophic"
+    ]
+  },
+  "grid": {
+    "hz": 50,
+    "volts": 230,
+    "note": "AS 60038: 230 V, 50 Hz"
+  },
+  "tariff": {
+    "currency": "AUD",
+    "symbol": "A$",
+    "peakHours": [
+      16,
+      21
+    ],
+    "peak": 0.45,
+    "offpeak": 0.2,
+    "drCredit": 0.8,
+    "nightTargetPct": 60,
+    "label": "Evening VPP spread (synthetic)"
+  },
+  "criticalLoads": [
+    {
+      "name": "Mobile tower",
+      "kw": 9
+    },
+    {
+      "name": "Town water pump",
+      "kw": 18
+    },
+    {
+      "name": "Evacuation centre",
+      "kw": 24
+    }
+  ],
+  "signal": "BoM Fire Danger Rating: Catastrophic",
+  "notice": "Distributor de-energisation notice",
+  "priority": "Life Support Register",
+  "decider": "Network operator",
+  "tariffLabel": "Evening VPP spread (synthetic)",
+  "currency": "USD equivalent",
+  "siteLabel": "home",
+  "interlockPack": "australia",
+  "params": {
+    "price_mode": "tou",
+    "on_peak": 0.45,
+    "off_peak": 0.2,
+    "on_peak_hours": [
+      17,
+      21
+    ],
+    "adoption_pct": 30,
+    "daily_use_kwh": 22,
+    "medical_baseline_pct": 3,
+    "planned_outage_h": 48,
+    "mode_critical": 6,
+    "mode_essential": 12,
+    "mode_normal": 22
+  }
+}
